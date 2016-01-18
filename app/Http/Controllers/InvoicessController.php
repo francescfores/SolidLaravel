@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Invoicess;
+use App\Repositories\InvoiceRepository;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+
 
 class InvoicessController extends Controller
 {
@@ -16,7 +17,9 @@ class InvoicessController extends Controller
         if(!Auth::check()){
             return "Forbidden!";
         }
-        $database_invoices = $this->getAllInvoicesFromDatabase();
+        $invoicesRepo = new InvoiceRepository();
+
+        $database_invoices = $invoicesRepo->getAllInvoicesFromDatabase();
         $invoices = $this->tranform($database_invoices);
 
         return view('invoices', compact('invoices'));

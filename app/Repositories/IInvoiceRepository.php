@@ -1,0 +1,23 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: francesc
+ * Date: 18/01/16
+ * Time: 18:22
+ */
+interface IInvoiceRepository {
+
+    public function all();
+
+    public function paginate($perPage = 15, $columns = array('*'));
+
+    public function create(array $data);
+
+    public function update(array $data, $id);
+
+    public function delete($id);
+
+    public function find($id, $columns = array('*'));
+
+    public function findBy($field, $value, $columns = array('*'));
+}
