@@ -15,17 +15,18 @@ class InvoicessController extends Controller
 
     protected $repo;
 
+    //DEPENDENCY INJECTION
     public function __construct(InvoiceRepository $repo){
         $this->repo = $repo;
     }
 
     public function index(){
 
-/*        if(!Auth::check()){
+        /*if(!Auth::check()){
             return "Forbidden!";
         }*/
 
-        $invoicesRepo = new InvoiceRepository();
+        //$invoicesRepo = new InvoiceRepository();
 
 
 
