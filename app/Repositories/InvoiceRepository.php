@@ -3,12 +3,12 @@
 namespace App\Repositories;
 use App\Invoicess;
 
-class InvoiceRepository implements IInvoiceRepository{
+class InvoiceRepository /* implements IInvoiceRepository*/{
     public function getAllInvoicesFromDatabase(){
         return Invoicess::all();
     }
     public function all(){
-
+            return Invoicess::all();
     }
 
     public function paginate($perPage = 15, $columns = array('*')){

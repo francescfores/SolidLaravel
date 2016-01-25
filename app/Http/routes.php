@@ -30,7 +30,11 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/invoices', 'InvoicessController@index');
 });
 
+
 Route::group(['middleware' => 'web'], function () {
+
+   /* Route::get('/invoices',['middleware' => 'auth'], 'InvoicessController@index');*/
+
     Route::auth();
 
     Route::get('/home', 'HomeController@index');

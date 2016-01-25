@@ -12,15 +12,26 @@ use Illuminate\Support\Facades\Auth;
 
 class InvoicessController extends Controller
 {
+
+    protected $repo;
+
+    public function __construct(InvoiceRepository $repo){
+        $this->repo = $repo;
+    }
+
     public function index(){
 
-        if(!Auth::check()){
+/*        if(!Auth::check()){
             return "Forbidden!";
-        }
+        }*/
+
         $invoicesRepo = new InvoiceRepository();
 
-        $database_invoices = $invoicesRepo->getAllInvoicesFromDatabase();
-        $invoices = $this->tranform($database_invoices);
+
+
+        $invoices =  $this->repo->all();
+        $invoices = $this->tranform($invoices);
+
 
         return view('invoices', compact('invoices'));
 
