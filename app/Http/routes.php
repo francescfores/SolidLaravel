@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 /*
 |--------------------------------------------------------------------------
@@ -26,21 +23,36 @@ Route::get('/', function () {
 |
 */
 
-
+/*
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/invoices', 'InvoicessController@index');
-});
 
+});*/
+
+
+App::bind(App\Repositories\IInvoiceRepository::class,
+    App\Repositories\InvoiceRepository::class);
 
 Route::group(['middleware' => 'web'], function () {
+
+
+ /*  Route::get('/',['as' => 'welcome',
+        'uses', 'WelcomeController@index']);*/
+
+    Route::get('/',['as' => 'welcome',
+        'uses'=>'WelcomeController@index']);
 
    /* Route::get('/invoices',['middleware' => 'auth'], 'InvoicessController@index');*/
 
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
+
+    Route::get('/invoices', 'InvoicessController@index');
+
+    Route::post('sentContactEmail','ContactEmailController@send');
+
 });
 
-App::bind(App\Repositories\IInvoiceRepository::class,
-    App\Repositories\InvoiceRepository::class);
+
+
 
