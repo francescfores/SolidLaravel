@@ -7,17 +7,43 @@
  */
 
 namespace App\Repositories;
-
+use Illuminate\Database\Eloquent\Model;
 
 use App\User;
+use Mockery\CountValidator\Exception;
 
-class UserRepository implements  IInvoiceRepository
+abstract  Repo implements  IInvoiceRepository
 {
 
+    protected $model;
+
+    /**
+     * UserRepository constructor.
+     * @param $model
+     */
+
+    public function __construct(Model $model)
+    {
+        $this->model = $this->makeModel();
+    }
+
+    abstract function model();
+
+    public function makeModel(){
+        $model =  App::make($this->model());
+
+        if(!model instanceof Model){
+            throw new Exception;
+        }
+
+        return $model;
+
+    }
 
     public function all()
     {
         return User::all();
+        //return $this->$model::all();
     }
 
     public function paginate($perPage = 15, $columns = array('*'))
