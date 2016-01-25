@@ -10,9 +10,10 @@ namespace App\Repositories;
 use Illuminate\Database\Eloquent\Model;
 
 use App\User;
+use Illuminate\Support\Facades\App;
 use Mockery\CountValidator\Exception;
 
-abstract  Repo implements  IInvoiceRepository
+abstract class Repo implements  IInvoiceRepository
 {
 
     protected $model;
@@ -22,7 +23,7 @@ abstract  Repo implements  IInvoiceRepository
      * @param $model
      */
 
-    public function __construct(Model $model)
+    public function __construct()
     {
         $this->model = $this->makeModel();
     }
@@ -32,7 +33,7 @@ abstract  Repo implements  IInvoiceRepository
     public function makeModel(){
         $model =  App::make($this->model());
 
-        if(!model instanceof Model){
+        if(!$model instanceof Model){
             throw new Exception;
         }
 
@@ -42,8 +43,8 @@ abstract  Repo implements  IInvoiceRepository
 
     public function all()
     {
-        return User::all();
-        //return $this->$model::all();
+
+        return $this->model->all();
     }
 
     public function paginate($perPage = 15, $columns = array('*'))
