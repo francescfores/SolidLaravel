@@ -3,14 +3,12 @@
  * Created by PhpStorm.
  * User: francesc
  * Date: 25/01/16
- * Time: 16:49
+ * Time: 16:48
  */
 namespace App\Repositories;
 
-interface IInvoiceRepository
+interface IUserRepository
 {
-    public function getAllInvoicesFromDatabase();
-
     public function all();
 
     public function paginate($perPage = 15, $columns = array('*'));
