@@ -32,7 +32,7 @@ Route::group(['middleware' => ['web']], function () {
 App::bind(App\Repositories\IInvoiceRepository::class,
     App\Repositories\InvoiceRepository::class);
 
-Route::group(['middleware' => 'web'], function () {
+Route::group(['middleware' => 'web','pjax'], function () {
 
 
  /*  Route::get('/',['as' => 'welcome',
@@ -51,6 +51,17 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::post('sentContactEmail','ContactEmailController@send');
 
+    Route::post('sentContactEmail','ContactEmailController@send');
+
+    Route::get('apartat1',function(){
+    	return view('apartat1');
+    });
+    Route::get('apartat2',function(){
+    	return view('apartat2');
+    });
+    Route::get('apartat3',function(){
+    	return view('apartat3');
+    });
 });
 
 

@@ -40,7 +40,7 @@ desired effect
         @include('layouts.partials.contentheader')
 
         <!-- Main content -->
-        <section class="content">
+        <section class="content" id="pjax-container">
             <!-- Your Page Content Here -->
             @yield('main-content')
         </section><!-- /.content -->
@@ -53,6 +53,11 @@ desired effect
 </div><!-- ./wrapper -->
 
 @include('layouts.partials.scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.js" type="text/javascript"></script>
+
+<script>
+    $(document).pjax('a','#pjax-container')
+</script>
 
 </body>
 </html>

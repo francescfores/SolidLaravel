@@ -20,6 +20,8 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="css/all.css">
+
     <script src="{{ asset('/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
     <script src="{{ asset('/js/smoothscroll.js') }}"></script>
 
@@ -286,5 +288,6 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         interval: 3500
     })
 </script>
+<script src="js/all.js"></script>
 </body>
 </html>

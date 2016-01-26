@@ -35,6 +35,9 @@
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>Home</span></a></li>
             <li><a href="{{ url('invoices') }}"><i class='fa fa-link'></i> <span>Invoices</span></a></li>
+            <li><a href="{{ url('apartat1') }}">apartat 1</a></li>
+            <li><a href="{{ url('apartat2') }}">apartat 2</a></li>
+            <li><a href="{{ url('apartat3') }}">apartat 3</a></li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
