@@ -4,20 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/Http/Controllers/InvoicessController.php" line="39" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75658f34-d0ca-4f47-8419-1e515de69508" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/Pjaxmiddleware.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/pjax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/css/sweetalert-dev.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/css/sweetalert.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/landing.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/landing.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/partials/scripts.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/scripts.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/sidebar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="75658f34-d0ca-4f47-8419-1e515de69508" name="Default" comment="" />
     <ignored path="solid_laravel.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -428,7 +415,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Laravel/tasksAPI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ResponsiveWebDesign" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
   </component>
   <component name="RecentsManager">
